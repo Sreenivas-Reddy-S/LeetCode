@@ -1,0 +1,19 @@
+package Strings;
+
+public class balancedStringSplit {
+    public static void main(String[] args) {
+        String s = "RLRRLLRLRL";
+        System.out.println(balancedStringSplit(s));
+    }
+
+    public static int balancedStringSplit(String s){
+        int result = 0;
+        int count = 0;
+        for(char c: s.toCharArray()){
+            if(c == 'R') count++;
+            else count--;
+            if(count == 0) result++;
+        }
+        return result;
+    }
+}
